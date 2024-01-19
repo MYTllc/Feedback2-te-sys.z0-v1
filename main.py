@@ -1,5 +1,6 @@
+import os
 import discord
-import dotenv
+from dotenv import load_dotenv
 from discord.ext import commands
 import asyncio
 import time
@@ -105,7 +106,9 @@ async def on_message(message):
         await message.delete()
 
 
+# Access the Discord token from the environment variables
+token = os.environ.get('token')
 
 keep_alive()
 
-bot.run(process.env.token)
+bot.run(token)
