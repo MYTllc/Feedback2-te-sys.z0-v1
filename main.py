@@ -1,4 +1,5 @@
 import discord
+import dotenv
 from discord.ext import commands
 import asyncio
 import time
@@ -107,4 +108,4 @@ async def on_message(message):
 
 keep_alive()
 
-bot.run('MTEzOTE2NzgxODQzMzE2NzM3MA.GWZ5bM.-vFpLsHS_Kku6U7_WerEtNTRhhUNMz-ahddPlM')
+bot.run(process.env.token)
